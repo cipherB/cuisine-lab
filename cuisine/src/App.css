@@ -1,0 +1,317 @@
+/* default react stylings */
+body {
+  background: linear-gradient(to top, #e366f6da, #fff);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* home page */
+
+.land {
+  margin: 0.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .land {
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+}
+
+.land span {
+  color: #e366f6;
+  text-shadow: .06em .05em 0 hsl(292, 44%, 38%);
+}
+
+.land img {
+  height: 80%;
+  width: 80%;
+}
+
+.service {
+  padding: 0.1em;
+  margin: 0;
+}
+
+.service h2 {
+  color: #e366f6;
+}
+.service img {
+  margin-top: 1.2em;
+  height: 80%;
+  width: 90%;
+}
+
+.service-text {
+  padding: 0 10px 0 10px;
+}
+
+
+@media (min-device-width: 1024px) {
+  .service {
+    display: flex;
+    text-align: left;
+    padding: 0 80px 0 80px;
+  }
+
+  .alter {
+    flex-direction: row-reverse;
+    text-align: right !important;
+  }
+  
+  .service h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .service h3 {
+    font-size: 30px;
+  }
+  .service img {
+    height: 400px;
+    width: 560px;
+  }
+  .service-text {
+    font-size: 20px !important;
+  }
+}
+
+.certified {
+  margin: 1.5em;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.certified-icons {
+    background-color: #e366f6c9;
+  color: white;
+  font-size: 2em;
+  padding: 1em;
+  margin: 0.8em;
+}
+
+@media (max-width: 800px) {
+  .certified {
+    display: block;
+  }
+}
+
+/* Recipes */
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar{
+  width: 50%;
+  border: none;
+  padding: 10px;
+    box-shadow: 0px 5px 20px #e366f6c9;
+}
+
+.search-button{
+  background: lightcoral;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+
+.recipes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Contact */
+.contact-title {
+  height: 40vh;
+  display: block;
+  text-align: center;
+}
+
+.contact-title h3 {
+  color: #e366f6c9;
+}
+
+.contact-title h1 {
+  color: #9909afc9;
+}
+
+@media (min-device-width: 1024px) {
+  .contact-title h3 {
+    font-size: 1.8em;
+  }
+  
+  .contact-title h1 {
+    font-size: 2.8em;
+  }
+}
+
+@media (min-device-width: 1024px) {
+  .contact-pose {
+    display: flex;
+  }
+}
+
+.contact-form {
+  width: 80%;
+  margin: 2% 10%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.445);
+  box-shadow: 0px 5px 20px #e366f6c9;
+}
+
+.social {
+  display: block;
+  text-align: left;
+  flex: 50%;
+}
+.social-list {
+  color: #9909afc9;
+}
+
+/* Error */
+.error {
+  height: 100vh;
+  width: 100vw;
+  color: #e366f6c9;
+  font-size: 2em;
+  background-image: url(./assets//page_not_found.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 800px) {
+  .error {
+    height: 100vh;
+    width: 100vw;
+    font-size: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* About */
+.about-title h1 {
+  color: #e366f6c9;
+}
+
+.about {
+  margin-bottom: 3em;
+}
+
+.about h2 {
+  color: #e366f6;
+  border-bottom: 2px solid #e366f6;
+}
+.about img {
+  margin-top: 1.2em;
+  height: 80%;
+  width: 90%;
+}
+
+.about-text {
+  padding: 0 10px 0 10px;
+}
+
+
+@media (min-device-width: 1024px) {
+
+  .about-title h1 {
+    font-size: 2.8em;
+  }
+  .about {
+    display: flex;
+    text-align: left;
+    padding: 0 80px 0 80px;
+  }
+
+  .alter {
+    flex-direction: row-reverse;
+    text-align: right !important;
+  }
+  
+  .about h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .about h3 {
+    font-size: 30px;
+  }
+  .about img {
+    height: 400px;
+    width: 560px;
+  }
+  .about-text {
+    font-size: 20px !important;
+  }
+}
+
+.comments {
+  font-size: 1.8em;
+  color: #9c44aac9;
+}
+
+.students {
+  display: flex;
+}
+
+.students-card {
+  margin-left: 2em;
+}
+
+@media (max-width: 800px) {
+  .students {
+    display: block;
+    padding: 10%;
+  }
+  .students-card {
+    margin-bottom: 2em;
+    margin-left: 0;
+  }
+}
+
