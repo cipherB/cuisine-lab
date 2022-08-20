@@ -171,13 +171,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 5px 10px #e366f651;
 }
 
 .search-bar{
   width: 50%;
   border: none;
   padding: 10px;
-    box-shadow: 0px 5px 20px #e366f6c9;
 }
 
 .search-button{
