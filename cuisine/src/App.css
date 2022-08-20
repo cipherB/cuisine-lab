@@ -1,6 +1,6 @@
 /* default react stylings */
 body {
-  background: linear-gradient(to top, #e366f6da, #fff);
+  background: linear-gradient(to top, #e366f642, #fff);
 }
 
 .App {
@@ -47,17 +47,14 @@ body {
 .land {
   margin: 0.4em;
   display: flex;
+  align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 1.5em;
   text-align: center;
-}
-
-@media (max-width: 800px) {
-  .land {
-    flex-direction: column;
-    font-size: 0.8em;
-  }
+  gap: 2rem;
+  padding: 1rem 4rem;
+  margin-bottom: 60px;
 }
 
 .land span {
@@ -65,13 +62,38 @@ body {
   text-shadow: .06em .05em 0 hsl(292, 44%, 38%);
 }
 
+.land h1 {
+  padding-right: 2rem;
+  line-height: 64px;
+}
+
 .land img {
-  height: 80%;
-  width: 80%;
+  height: 50%;
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .land {
+    flex-direction: column;
+    font-size: 0.8em;
+    gap: 1rem;
+    padding: 10px 24px;
+    margin-bottom: 40px;
+  }
+
+  .land img {
+    height: 80%;
+    width: 80%;
+  }
+
+  .land h1 {
+    padding: 0;
+    line-height: initial;
+  }
 }
 
 .service {
-  padding: 0.1em;
+  padding: 2rem 0;
   margin: 0;
 }
 
@@ -79,13 +101,13 @@ body {
   color: #e366f6;
 }
 .service img {
-  margin-top: 1.2em;
+  margin-top: 2em;
   height: 80%;
   width: 90%;
 }
 
 .service-text {
-  padding: 0 10px 0 10px;
+  padding: 0 20px;
 }
 
 
@@ -93,12 +115,14 @@ body {
   .service {
     display: flex;
     text-align: left;
-    padding: 0 80px 0 80px;
+    gap: 6rem;
+    padding: 4rem 4.2rem;
   }
 
   .alter {
     flex-direction: row-reverse;
     text-align: right !important;
+    gap: 6rem;
   }
   
   .service h2 {
@@ -111,14 +135,16 @@ body {
   .service img {
     height: 400px;
     width: 560px;
+    padding: 0;
   }
   .service-text {
     font-size: 20px !important;
+    padding: 0;
   }
 }
 
 .certified {
-  margin: 1.5em;
+  margin: 4rem 1.5rem;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -135,6 +161,7 @@ body {
 @media (max-width: 800px) {
   .certified {
     display: block;
+    margin: 4rem 1rem;
   }
 }
 
@@ -168,7 +195,7 @@ body {
 
 /* Contact */
 .contact-title {
-  height: 40vh;
+  height: 20vh;
   display: block;
   text-align: center;
 }
@@ -181,7 +208,43 @@ body {
   color: #9909afc9;
 }
 
+.contact-form {
+  width: 80%;
+  margin: 2% 10%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.253);
+  box-shadow: 0px 5px 20px #e366f6c9;
+}
+
+
+.social {
+  display: block;
+  text-align: left;
+  flex: 50%;
+  padding: 20px 0 30px 20px;
+}
+.social-list {
+  color: #9909afc9;
+  padding-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (min-device-width: 1024px) {
+  .contact-title {
+    height: 40vh;
+  }
+
   .contact-title h3 {
     font-size: 1.8em;
   }
@@ -189,30 +252,17 @@ body {
   .contact-title h1 {
     font-size: 2.8em;
   }
-}
 
-@media (min-device-width: 1024px) {
   .contact-pose {
     display: flex;
+    margin-bottom: 60px;
+  }
+
+  .social {
+    padding: auto;
   }
 }
 
-.contact-form {
-  width: 80%;
-  margin: 2% 10%;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 0.445);
-  box-shadow: 0px 5px 20px #e366f6c9;
-}
-
-.social {
-  display: block;
-  text-align: left;
-  flex: 50%;
-}
-.social-list {
-  color: #9909afc9;
-}
 
 /* Error */
 .error {
@@ -238,15 +288,22 @@ body {
 /* About */
 .about-title h1 {
   color: #e366f6c9;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
 }
 
 .about {
-  margin-bottom: 3em;
+  margin-bottom: 4rem;
+}
+
+.about hr {
+  margin: 0 6rem;
+  background-color: #e366f6;
+  height: 4px;
 }
 
 .about h2 {
   color: #e366f6;
-  border-bottom: 2px solid #e366f6;
 }
 .about img {
   margin-top: 1.2em;
@@ -262,25 +319,38 @@ body {
 @media (min-device-width: 1024px) {
 
   .about-title h1 {
-    font-size: 2.8em;
+    font-size: 50px;
+    margin-bottom: 8rem;
   }
+
+  .about hr {
+    margin: 0 20rem 0 0;
+  }
+
   .about {
     display: flex;
+    align-items: center;
     text-align: left;
-    padding: 0 80px 0 80px;
+    padding: 0 80px 120px 80px;
+    gap: 4rem;
   }
 
   .alter {
     flex-direction: row-reverse;
     text-align: right !important;
+    gap: 4rem;
+  }
+
+  .alter hr {
+    margin: 0 0 0 20rem;
   }
   
   .about h2 {
-    font-size: 70px;
+    font-size: 42px;
     margin-bottom: 0;
   }
   .about h3 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .about img {
     height: 400px;
@@ -298,6 +368,9 @@ body {
 
 .students {
   display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  padding: 1rem 2rem 6rem 2rem;
 }
 
 .students-card {

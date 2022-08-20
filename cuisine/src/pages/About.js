@@ -26,6 +26,11 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
+      height: 450,
+    },
+    rootExpand: {
+        height: "auto",
+        maxWidth: 345,
     },
     media: {
       height: 0,
@@ -48,10 +53,18 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded1, setExpanded1] = React.useState(false);
+    const [expanded2, setExpanded2] = React.useState(false);
+    const [expanded3, setExpanded3] = React.useState(false);
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
+    const handleExpandClick1 = () => {
+        setExpanded1(!expanded1);
+    };
+    const handleExpandClick2 = () => {
+        setExpanded2(!expanded2);
+    };
+    const handleExpandClick3 = () => {
+        setExpanded3(!expanded3);
     };
     return (
         <div>
@@ -61,6 +74,7 @@ const About = () => {
             <div className="about" >
             <div >
                 <Fade top><h2>About Us</h2></Fade>
+                <hr />
                 <Fade top>
                     <h3>
                         Our humble beginning
@@ -81,6 +95,7 @@ const About = () => {
             <div className="about alter" >
             <div >
                 <Fade top><h2>Innovation</h2></Fade>
+                <hr />
                 <Fade top>
                     <h3>
                         We love to innovate
@@ -99,7 +114,7 @@ const About = () => {
                 <h3>Comments</h3>
             </div>
             <div className="students">
-                <Card className={`${classes.root} students-card`}>
+                <Card className={`${expanded1 ? classes.rootExpand : classes.root} students-card`}>
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe" className={classes.avatar}>
@@ -134,16 +149,16 @@ const About = () => {
                         </IconButton>
                         <IconButton
                         className={clsx(classes.expand, {
-                            [classes.expandOpen]: expanded,
+                            [classes.expandOpen]: expanded1,
                         })}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
+                        onClick={handleExpandClick1}
+                        aria-expanded={expanded1}
                         aria-label="show more"
                         >
                         <ExpandMoreIcon />
                         </IconButton>
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <Collapse in={expanded1} timeout="auto" unmountOnExit>
                         <CardContent>
                         <Typography paragraph>Method:</Typography>
                         <Typography paragraph>
@@ -171,7 +186,7 @@ const About = () => {
                         </CardContent>
                     </Collapse>
                 </Card>
-                <Card className={`${classes.root} students-card`}>
+                <Card className={`${expanded2 ? classes.rootExpand : classes.root} students-card`}>
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe" className={classes.avatar}>
@@ -206,16 +221,16 @@ const About = () => {
                         </IconButton>
                         <IconButton
                         className={clsx(classes.expand, {
-                            [classes.expandOpen]: expanded,
+                            [classes.expandOpen]: expanded2,
                         })}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
+                        onClick={handleExpandClick2}
+                        aria-expanded={expanded2}
                         aria-label="show more"
                         >
                         <ExpandMoreIcon />
                         </IconButton>
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <Collapse in={expanded2} timeout="auto" unmountOnExit>
                         <CardContent>
                         <Typography paragraph>Method:</Typography>
                         <Typography paragraph>
@@ -243,7 +258,7 @@ const About = () => {
                         </CardContent>
                     </Collapse>
                 </Card>
-                <Card className={`${classes.root} students-card`}>
+                <Card className={`${expanded3 ? classes.rootExpand : classes.root} students-card`}>
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe" className={classes.avatar}>
@@ -278,16 +293,16 @@ const About = () => {
                         </IconButton>
                         <IconButton
                         className={clsx(classes.expand, {
-                            [classes.expandOpen]: expanded,
+                            [classes.expandOpen]: expanded3,
                         })}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
+                        onClick={handleExpandClick3}
+                        aria-expanded={expanded3}
                         aria-label="show more"
                         >
                         <ExpandMoreIcon />
                         </IconButton>
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <Collapse in={expanded3} timeout="auto" unmountOnExit>
                         <CardContent>
                         <Typography paragraph>Method:</Typography>
                         <Typography paragraph>

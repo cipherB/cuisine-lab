@@ -68,8 +68,8 @@ const Contact = () => {
                           <Avatar className={classes.avatar} style={{backgroundColor:"#E366F6"}}>
                           <PhoneIcon />
                           </Avatar>
-                          <Typography component="h4" variant="h6">
-                          Need Assistance? Message Us
+                          <Typography component="h4" variant="h6" align='center'>
+                            Need Assistance? Message Us
                           </Typography>
                           <form className={classes.form} noValidate>
                           <TextField
@@ -123,15 +123,18 @@ const Contact = () => {
                 <div className="social">
                   <div className="social-list" >
                     <h2>Connect</h2>
-                    <span><MailIcon />ENIGMA@GMAIL.COM<br/><PhoneIcon />+234-0000-0005</span>
+                    <div>
+                      <span className='contact-info' ><MailIcon />ENIGMA@GMAIL.COM</span><br/>
+                      <span className='contact-info' ><PhoneIcon />+234-0000-0005</span>
+                    </div>
                   </div>
                   <div className="social-list" >
                     <h2>Follow Us</h2>
-                    <span><FacebookIcon /><TwitterIcon /><InstagramIcon /><RedditIcon /></span>
+                    <div className='social-icons'><FacebookIcon /><TwitterIcon /><InstagramIcon /><RedditIcon /></div>
                   </div>
                   <div className="social-list" >
                     <h2>Our Address</h2>
-                    <span><LocationOnIcon /> Middle of Somewhere</span>
+                    <div className='contact-info'><LocationOnIcon /> Middle of Somewhere</div>
                   </div>
                 </div>
               </Fade>
